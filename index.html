@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexFlow Automations | Scale Your Business with AI & Workflows</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased overflow-x-hidden">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent flex items-center gap-2">
+                        <i class="fa-solid to-indigo-500 from-blue-400 fa-cubes-stacked"></i>
+                        ApexFlow
+                    </a>
+                </div>
+                
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#services" class="text-slate-300 hover:text-blue-400 transition-colors">Services</a>
+                    <a href="#proof" class="text-slate-300 hover:text-blue-400 transition-colors">Results</a>
+                    <a href="#process" class="text-slate-300 hover:text-blue-400 transition-colors">Our Process</a>
+                    <a href="#contact" class="text-slate-300 hover:text-blue-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+                        Book a Free Audit
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle menu">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Services</a>
+            <a href="#proof" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Results</a>
+            <a href="#process" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Our Process</a>
+            <a href="#contact" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition-colors">Contact</a>
+            <a href="#contact" class="block w-full text-center px-4 py-3 rounded-lg text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600">Book a Free Audit</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Background Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    Now Booking for Q3 Optimization Cycles
+                </span>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.15] mb-6">
+                    Stop wasting hours on tasks that <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">AI can do in seconds</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 font-normal leading-relaxed mb-10 max-w-2xl mx-auto">
+                    We design, build, and deploy custom AI agents and automated workflows that eliminate manual data entry, scale operations, and capture missed leads 24/7.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xl shadow-blue-500/20 group">
+                        Eliminate My Bottlenecks
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-slate-300 bg-slate-800/60 border border-slate-700 hover:bg-slate-800 hover:text-white transition-all">
+                        See What We Automate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Features Section -->
+    <section id="services" class="py-20 bg-slate-950 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-3">Our Core Capabilities</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Engineered to replace manual labor</p>
+                <p class="mt-4 text-base text-slate-400">We don't do surface-level integrations. We build deep enterprise infrastructure tailored to your exact operational workflows.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-8 rounded-2xl hover:border-blue-500/40 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Autonomous AI Assistants</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Custom LLM agents trained on your business data. They qualify incoming leads, schedule calls directly into your CRM, and answer multi-step customer support requests around the clock.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-8 rounded-2xl hover:border-indigo-500/40 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Advanced CRM Architecture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Stop bouncing between ten applications. We design unified data pipelines connecting GoHighLevel, Make, or n8n so information syncs flawlessly without manual extraction.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-900 border border-slate-800/80 p-8 rounded-2xl hover:border-purple-500/40 transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Trigger-Based Lead Nurturing</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Instantly touch base with prospects the absolute second they signal intent. Deliver custom quotes, dynamic follow-up text campaigns, and auto-generated digital deliverables based on user behavior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials Section -->
+    <section id="proof" class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-3">Proven Results</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">What happens when operations just flow</p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Testimonial Items -->
+                <div id="testimonial-container" class="relative min-h-[250px] flex items-center">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide w-full bg-gradient-to-b from-slate-800/50 to-slate-900/50 border border-slate-800 p-8 md:p-10 rounded-2xl absolute transition-all duration-500 opacity-100 scale-100 pointer-events-auto">
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-lg md:text-xl text-slate-300 italic mb-6">
+                            "Before working with this team, our administrative workflows were a chaotic mess of spreadsheets and forgotten follow-ups. The custom Make scenario they deployed now auto-books clients and tracks dynamic statuses seamlessly. It saved our team easily 15+ hours every single week."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-blue-400 border border-slate-600">
+                                KL
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Karen L.</h4>
+                                <p class="text-slate-500 text-sm">Director, Ontario Professional Training Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide w-full bg-gradient-to-b from-slate-800/50 to-slate-900/50 border border-slate-800 p-8 md:p-10 rounded-2xl absolute transition-all duration-500 opacity-0 scale-95 pointer-events-none">
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-lg md:text-xl text-slate-300 italic mb-6">
+                            "The automated AI voice assistant and web intake setup they engineered captured over 40 qualified leads over the weekend alone without human intervention. The ROI became abundantly obvious within the first 14 days of launch."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center font-bold text-indigo-400 border border-slate-600">
+                                JM
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Jared M.</h4>
+                                <p class="text-slate-500 text-sm">Founder, Core Media Agency</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="flex justify-center gap-4 mt-8">
+                    <button id="prev-slide" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-all active:scale-90">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="next-slide" class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-500 transition-all active:scale-90">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-400 mb-3">Our Framework</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Three steps to seamless operation</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
+                <!-- Step 1 -->
+                <div class="relative bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold shadow-lg shadow-blue-500/20">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 mt-2">Discovery & Map</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We sit down and audit your current operational bottlenecks, tracing exactly where human time is lost and leads leak out.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold shadow-lg shadow-indigo-500/20">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 mt-2">Architect & Integrate</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We build out your automation blueprints using clean API protocols, custom webhooks, and secure cloud platforms.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center font-bold shadow-lg shadow-purple-500/20">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 mt-2">Deploy & Optimize</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        We put infrastructure live, rigorously test paths, and continuously train your custom systems to optimize conversion performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead Capture Form Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gradient-to-b from-slate-800/80 to-slate-900/80 border border-slate-800 p-8 md:p-12 rounded-3xl shadow-2xl backdrop-blur-sm">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white tracking-tight mb-3">Request a Free Automation Audit</h2>
+                    <p class="text-slate-400 text-sm max-w-md mx-auto"> Let's discover exactly how many hours we can buy back for your organization. Drop your information below to get started. </p>
+                </div>
+
+                <form id="audit-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors text-sm" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Business Email</label>
+                            <input type="email" id="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors text-sm" placeholder="john@company.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="bottleneck" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">What's your biggest operational bottleneck?</label>
+                        <select id="bottleneck" name="bottleneck" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-400 focus:outline-none focus:border-blue-500 transition-colors text-sm">
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="leads">Losing or forgetting to follow up with leads</option>
+                            <option value="data">Too much manual data entry/spreadsheets</option>
+                            <option value="support">Overwhelmed by support emails & messaging</option>
+                            <option value="other">Something else completely</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Additional Context (Optional)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500 transition-colors text-sm resize-none" placeholder="Tell us a bit about your current software tools..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xl shadow-blue-500/20 active:scale-[0.99]">
+                        Submit Audit Request
+                    </button>
+                </form>
+
+                <!-- Success State (Hidden by default) -->
+                <div id="form-success" class="hidden text-center py-8 space-y-4">
+                    <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-3xl rounded-full flex items-center justify-center mx-auto">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Audit Requested Successfully!</h3>
+                    <p class="text-slate-400 text-sm max-w-sm mx-auto">Thank you for reaching out. Our engineering architecture team will review your business input and respond within 24 business hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="flex items-center justify-center gap-2 text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
+                <i class="fa-solid fa-cubes-stacked"></i> ApexFlow
+            </div>
+            <div class="flex justify-center space-x-6 text-base">
+                <a href="#" class="text-slate-600 hover:text-slate-400"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-slate-600 hover:text-slate-400"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="text-slate-600 hover:text-slate-400"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p>&copy; 2026 ApexFlow Automations. All rights reserved. Built for modern operational scaling.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // 1. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-xl';
+            }
+        });
+
+        // Close mobile menu immediately upon choosing a navigation item link
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-xl';
+            });
+        });
+
+        // 2. Simple Client-Side Testimonial Slider Loop Logic
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+        let currentSlideIndex = 0;
+
+        function updateSlidePosition(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.replace('opacity-0', 'opacity-100');
+                    slide.classList.replace('scale-95', 'scale-100');
+                    slide.classList.replace('pointer-events-none', 'pointer-events-auto');
+                } else {
+                    slide.classList.replace('opacity-100', 'opacity-0');
+                    slide.classList.replace('scale-100', 'scale-95');
+                    slide.classList.replace('pointer-events-auto', 'pointer-events-none');
+                }
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateSlidePosition(currentSlideIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition(currentSlideIndex);
+        });
+
+        // 3. Form Validation & Client-Side UX Management
+        const auditForm = document.getElementById('audit-form');
+        const formSuccessState = document.getElementById('form-success');
+
+        auditForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop default form target handling redirection
+
+            const nameValue = document.getElementById('name').value.trim();
+            const emailValue = document.getElementById('email').value.trim();
+
+            if(nameValue === "" || emailValue === "") {
+                alert("Please fill out all required validation areas layout elements correctly.");
+                return;
+            }
+
+            // Hide the active input parameters layout visually, trigger success animation transition view state
+            auditForm.classList.add('hidden');
+            formSuccessState.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
